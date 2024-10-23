@@ -3,12 +3,12 @@
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
-    let height: number = 0;
+    let height = 0;
 
     // Component props
-    export let active: boolean = false;
-    export let disabled: boolean = false;
-    export let strokeWidth: string = '1vh';
+    export let active = false;
+    export let disabled = false;
+    export let strokeWidth = '1vh';
     export let variant: 'accent' | 'success' | 'error' | 'warning' = 'accent';
 
     // CSS variable for the variant

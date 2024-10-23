@@ -36,7 +36,9 @@
             </span>
         {/if}
 
-        {#if subtitle}<p class="text-tertiary/75 font-medium w-full text-[1.5vh]">
+        {#if subtitle}<p
+                class="text-tertiary/75 font-medium w-full text-[1.5vh]"
+            >
                 {subtitle}
             </p>{/if}
 
@@ -58,13 +60,6 @@
                     class="absolute grid place-items-center w-full h-full aspect-square"
                 >
                     <IconFail />
-                </div>
-            {:else}
-                <div
-                    transition:scale
-                    class="absolute grid place-items-center w-full h-full aspect-square"
-                >
-                    <IconLoading />
                 </div>
             {/if}
         </Hexagon>
@@ -89,14 +84,15 @@
                             class="h-full default-colour-transition ease-linear"
                         />
                     {:else if iteration > i}
-                        <div 
-                        class:bg-error={progress == 100 || state == 'fail'}
-                        class:bg-tertiary={state == null}
-                        class:glow-error={progress == 100 ||
-                            state == 'fail'}
-                        class:bg-success={state == 'success'}
-                        class:glow-success={state == 'success'}
-                        class="h-full bg-tertiary w-full" />
+                        <div
+                            class:bg-error={progress == 100 || state == 'fail'}
+                            class:bg-tertiary={state == null}
+                            class:glow-error={progress == 100 ||
+                                state == 'fail'}
+                            class:bg-success={state == 'success'}
+                            class:glow-success={state == 'success'}
+                            class="h-full bg-tertiary w-full"
+                        />
                     {/if}
                 </div>
             {/each}
